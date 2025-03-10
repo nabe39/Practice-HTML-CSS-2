@@ -1,0 +1,71 @@
+@use "../abstracts/" as *;
+
+/***************** Header Page *****************/
+
+//Navbar
+header {
+  padding: 0 80px;
+  @include tablet {
+    padding: 0 16px;
+  }
+  @include mobile {
+    padding: 0 16px;
+  }
+  nav {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr; /* Chia bố cục 3 phần */
+    align-items: center;
+    gap: 24px;
+    padding: 16px 0;
+    ul {
+      @include flex($align: center, $justify: space-between, $gap: 16px);
+
+      li {
+        list-style: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%; /* 16px */
+        a {
+          color: $text-color;
+        }
+        figure {
+          @include flex($gap: 8px, $align: center);
+        }
+      }
+    }
+
+    .link-direct-mobile {
+      display: none;
+    }
+
+    .btn-action {
+      @include flex($align: center, $justify: flex-end, $gap: 16px);
+      .btn {
+        padding: 16px 12px;
+      }
+    }
+
+    @include tablet {
+      padding: 16px 0;
+      @include flex($justify: space-between, $align: center);
+      .desktop {
+        display: none;
+      }
+      .link-direct-mobile {
+        display: block;
+      }
+    }
+
+    @include mobile {
+      padding: 16px 0;
+      @include flex($justify: space-between, $align: center);
+      .desktop {
+        display: none;
+      }
+      .link-direct-mobile {
+        display: block;
+      }
+    }
+  }
+}
