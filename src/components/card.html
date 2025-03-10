@@ -1,0 +1,10 @@
+<each loop="item in {{list}}">
+  <article>
+    <div class="{{item.class}} card">
+      <figure>
+        <img class="img-main" src="../assets/{{item.cardImage}}" alt="{{item.cardName}}" />
+      </figure>
+      <figcaption>{{item.contentCard}}</figcaption>
+    </div>
+  </article>
+</each>

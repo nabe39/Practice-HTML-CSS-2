@@ -1,0 +1,25 @@
+// Font family
+$primary-font: Roboto;
+
+// Breakpoints
+
+$medium: 480px;
+$extra-lager: 1024px;
+
+$mobile: calc($medium - 1px);
+$tablet: calc($extra-lager - 1px);
+
+// Colors
+$primary-color: #0F62FE;
+$second-color: #F2F4F8;
+$background-color: #ffffff;
+
+$text-color: #21272A;
+$text-second-color: #ffffff;
+$text-third-color: #0F62FE;
+$text-four-color: #A2A9B0;
+
+$footer-color: #697077;
+
+$title-section-color: #001D6C;
+

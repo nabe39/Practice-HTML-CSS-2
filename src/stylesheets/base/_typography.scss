@@ -1,0 +1,24 @@
+@use "../abstracts/" as *;
+
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+body {
+  font-family: $primary-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25.2px;
+  color: $text-color;
+  background-color: $background-color;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 25.2px;
+  }
+  @include mobile {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+}

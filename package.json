@@ -1,0 +1,22 @@
+{
+  "name": "practice-html-css",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "parcel src/pages/index.html --port 3000",
+    "build": "parcel build src/pages/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
+    "parcel-bundler": "^1.12.5",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^2.0.1",
+    "sass": "^1.85.1"
+  },
+  "devDependencies": {
+    "posthtml": "^0.16.6"
+  }
+}

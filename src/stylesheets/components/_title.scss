@@ -1,0 +1,54 @@
+@use "../abstracts/" as *;
+.title {
+  text-align: center;
+  &-primary {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $title-section-color;
+
+    @include tablet {
+      line-height: 20px;
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  &-secondary {
+    font-size: 42px;
+    line-height: 46.2px;
+    font-weight: 700;
+
+    @include tablet {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 26.4px;
+    }
+  }
+  &-third {
+    font-size: 18px;
+    line-height: 25.2px;
+    font-weight: 400;
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 25.2px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 22.4px;
+    }
+  }
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+}
