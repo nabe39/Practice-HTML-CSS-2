@@ -9,14 +9,11 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
+  "devDependencies": {
     "@parcel/transformer-sass": "^2.13.3",
     "parcel-bundler": "^1.12.5",
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^2.0.1",
-    "sass": "^1.85.1"
-  },
-  "devDependencies": {
-    "posthtml": "^0.16.6"
+    "sass": "^1.84.0"
   }
 }
