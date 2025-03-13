@@ -39,6 +39,9 @@
             @include flex($align: center, $justify: center, $gap: 16px);
             figure{
               max-width: 24px;
+              img{
+                width: auto;
+              }
             }
           }
           .team-btn {

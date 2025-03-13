@@ -1,0 +1,32 @@
+<nav>
+  <!-- Logo Web -->
+  <include
+    src="./components/logo.html"
+    locals='{"logo":"logo.webp", "logoMobile": "logo.webp"}'
+  ></include>
+
+  <!-- Link direct Page -->
+  <ul class="desktop">
+    <include
+      src="./components/list-direct-page.html"
+      locals='{"list":["Eleven","Twelve","Thirteen"]}'
+    >
+    </include>
+    <li>
+      <figure>
+        <figcaption>Sixteen</figcaption>
+        <img src="../assets/icon/ic_arrow_down.svg" alt="ic_arrow_down" class="img-main"/>
+      </figure>
+    </li>
+  </ul>
+
+  <figure class="link-direct-mobile">
+    <img src="../assets/icon/ic_plus_mobile.svg" alt="ic_plus_mobile" class="img-main">
+  </figure>
+
+  <!-- Button action -->
+  <div class="btn-action desktop">
+    <button class="btn btn-no-primary">Login</button>
+    <button class="btn">Start Free Trial</button>
+  </div>
+</nav>
