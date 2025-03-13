@@ -1,0 +1,95 @@
+@use "../../abstracts/" as *;
+
+/********* Team Page *********/
+.team {
+  padding: $padding-desktop;
+
+  @include tablet {
+    padding: $padding-mobile;
+  }
+
+  @include mobile {
+    padding: $padding-mobile;
+  }
+
+  @include flex($direction: column, $gap: 64px, $align: center);
+  background-color: $second-color;
+  &-cards {
+    gap: 16px;
+    max-width: 1280px;
+    .team-card {
+      @include flex($direction: column, $align: center);
+      padding: 0;
+      .container-context-team {
+        @include flex(
+          $direction: column,
+          $gap: 16px,
+          $justify: center,
+          $align: center
+        );
+        .content-title {
+          @include flex($direction: column);
+          span:nth-of-type(2) {
+            color: $footer-color;
+          }
+        }
+        .information-contact-member {
+          @include flex($direction: column, $gap: 16px);
+          .link-contact-member {
+            @include flex($align: center, $justify: center, $gap: 16px);
+            figure{
+              max-width: 24px;
+            }
+          }
+          .team-btn {
+            @include flex($align: center, $justify: center);
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            padding: 16px 12px;
+            max-height: 48px;
+            max-width: 180px;
+            height: auto;
+            border: 2px solid;
+          }
+        }
+      }
+    }
+  }
+
+  // ViewPoint: table
+  @include tablet {
+    .team-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      figure {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+
+  //   ViewPoint: mobile
+  @include mobile {
+    @include flex($gap: 32px);
+    .team-cards {
+      display: grid;
+      grid-template-columns: repeat((2, 1fr));
+      justify-items: center;
+      gap: 16px;
+    }
+    .team-btn {
+      max-width: 149px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .team-cards {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      gap: 16px;
+    }
+  }
+}

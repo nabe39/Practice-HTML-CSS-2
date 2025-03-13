@@ -1,0 +1,29 @@
+<each loop="item in {{list}}">
+  <div class="team-card card">
+    <picture class="avatar-member">
+      <source srcset="{{item.srcMobile}}" media="(max-width: 780px)" />
+      <img src="{{item.cardImage}}" alt="{{item.cardName}}" />
+    </picture>
+    <div class="container-context-team">
+      <div class="content-title">
+        <span>{{item.nameMember}}</span>
+        <span>{{item.roleMember}}</span>
+      </div>
+      <div class="information-contact-member">
+        <figure class="link-contact-member">
+          <include
+            src="./components/icon-list.html"
+            locals='{"icons":["ic_linkedin_gray.svg", "ic_twitter_gray.svg","ic_instagram_gray.svg","ic_facebook_gray.svg"
+            ]}'
+          >
+          </include>
+        </figure>
+        <div class="button-action">
+          <button class="team-btn btn btn-no-primary">
+            <span>{{item.contactName}}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</each>
