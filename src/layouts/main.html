@@ -1,0 +1,32 @@
+<main>
+  <!-- Tools Section  -->
+  <section class="tools">
+    <!-- Title -->
+    <include
+      src="./components/title.html"
+      locals='{"titlePrimary": "the tools you need","titleSecondary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.","titleSecondary2": "","titleThird":""}'
+    >
+    </include>
+
+    <!-- Start Card Tools -->
+    <div class="tools-cards cards">
+      <include
+        src="./components/card.html"
+        locals='{"list": [
+        {"class": "tools-card", "cardImage": "icon/ic_calendar.svg", "cardName": "ic_calendar", "contentCard":"Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse." },
+        {"class": "tools-card", "cardImage": "icon/ic_luggage.svg", "cardName": "ic_luggage", "contentCard":"Id eros pellentesque facilisi id mollis faucibus commodo enim." },
+        {"class": "tools-card", "cardImage": "icon/ic_activity.svg", "cardName": "ic_activity", "contentCard":"Nunc, pellentesque velit malesuada non massa arcu."},
+        {"class": "tools-card", "cardImage": "icon/ic_car.svg", "cardName": "ic_car", "contentCard":"Imperdiet purus pellentesque sit mi nibh sit integer faucibus." }
+        ]}'
+      >
+      </include>
+    </div>
+
+    <!-- Button Action -->
+    <include
+      src="./components/button-primary.html"
+      locals='{"classButton":"tools-btn"}'
+    >
+    </include>
+  </section>
+</main>

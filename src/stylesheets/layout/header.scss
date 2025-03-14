@@ -18,7 +18,6 @@
   }
 }
 
-
 //Navbar
 header {
   padding: 0 80px;
@@ -28,6 +27,7 @@ header {
   @include mobile {
     padding: 0 16px;
   }
+
   nav {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr; /* Chia bố cục 3 phần */
@@ -77,7 +77,6 @@ header {
     }
 
     @include mobile {
-
       padding: 16px;
 
       @include flex($justify: space-between, $align: center);
@@ -94,12 +93,14 @@ header {
   .hero {
     padding: 80px;
     background-color: $second-color;
-    @include flex($gap: 80px);
+
+    @include flex($gap: 80px, $justify: space-between);
 
     @include tablet {
       padding: 48px 16px;
       gap: 32px;
       flex-direction: column;
+      align-items: center;
     }
 
     @include mobile {
@@ -165,7 +166,6 @@ header {
         align-items: center;
         justify-items: center;
         width: 100%;
-        // text-align: center;
       }
     }
 
