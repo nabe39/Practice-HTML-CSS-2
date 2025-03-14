@@ -1,0 +1,89 @@
+@use "../../abstracts/" as *;
+
+/***** Blog Page *****/
+.blog {
+  @include flex($direction: column, $gap: 64px, $align: center);
+  padding: $padding-desktop;
+
+  @include tablet {
+    padding: $padding-mobile;
+  }
+
+  @include mobile {
+    padding: $padding-mobile;
+  }
+
+  &-cards {
+    max-width: 1280px;
+    .blog-card {
+      @include flex($justify: flex-start);
+      max-width: 308px;
+      max-height: 524px;
+      border: 1px solid #dde1e6;
+      .img-placeholder {
+        height: auto;
+        img {
+          width: 100%;
+          max-height: 220px;
+          height: auto;
+        }
+      }
+      .container-context-blog {
+        text-align: start;
+        @include flex($direction: column, $align: flex-start, $gap: 16px);
+        padding: 24px 16px 16px 16px;
+        .content-title {
+          @include flex($direction: column);
+        }
+        .information-content-author {
+          @include flex(
+            $direction: row,
+            $gap: 16px,
+            $align: center,
+            $justify: flex-start
+          );
+
+          figure {
+            width: 48px;
+          }
+          .author-detail {
+            @include flex($direction: column);
+            b {
+              line-height: 17.6px;
+            }
+            p {
+              color: #697077;
+              line-height: 22.4px;
+            }
+          }
+        }
+      }
+    }
+    @include desktop {
+      .blog-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  // ViewPoint: table
+  @include tablet {
+    .blog-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+  }
+
+  // ViewPoint: mobile
+  @include mobile {
+    padding: 48px 16px;
+    @include flex($gap: 32px);
+    .blog-cards {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+    }
+  }
+}
