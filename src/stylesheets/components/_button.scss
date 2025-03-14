@@ -5,8 +5,8 @@
   white-space: nowrap;
   border: 2px solid $primary-color;
   text-align: center;
-  color: $text-third-color;
-  background-color: $second-color;
+  color: $text-second-color;
+  background-color: $primary-color;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -14,9 +14,14 @@
   padding: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-  &-primary {
-    color: $text-second-color;
-    background-color: $primary-color;
+  &-no-primary {
+    color: $text-third-color;
+    background-color: $background-color;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    padding: 16px;
   }
 }
 @include desktop {
