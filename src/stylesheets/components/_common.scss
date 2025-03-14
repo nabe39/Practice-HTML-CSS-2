@@ -2,6 +2,7 @@
 @forward "button";
 @forward "card";
 @forward "title";
+@forward "img";
 
 .container {
   max-width: 1920px;
@@ -12,7 +13,6 @@
   }
 
   @include mobile {
-    padding: 0 15px;
     max-width: inherit;
   }
 }
