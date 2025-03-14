@@ -45,6 +45,9 @@
 
           figure {
             width: 48px;
+            img{
+              width: auto;
+            }
           }
           .author-detail {
             @include flex($direction: column);
