@@ -4,7 +4,7 @@
     <!-- Title -->
     <include
       src="./components/title.html"
-      locals='{"titlePrimary": "the tools you need","titleSecondary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.","titleSecondary2": "","titleThird":""}'
+      locals='{"titlePrimary": "the tools you need","titleSecondary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.","titleSecondary2": ""}'
     >
     </include>
 
@@ -28,5 +28,40 @@
       locals='{"classButton":"tools-btn"}'
     >
     </include>
+  </section>
+
+  <!-- Company Section -->
+  <section class="company">
+    <!-- title -->
+    <div class="company-introduce">
+      <include
+        src="./components/title.html"
+        locals='{"titlePrimary": "You Are in GooD Company", "titleSecondary": "Bibendum amet at molestie mattis.","titleSecondary2":""}'
+      ></include>
+
+      <p>
+        Rhoncus morbi et augue nec, in id ullamcorper at sit. Condimentum sit
+        nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut.
+        Non, amet, aliquet scelerisque nullam sagittis, pulvinar. Fermentum
+        scelerisque sit consectetur hac mi. Mollis leo eleifend ultricies purus
+        iaculis.
+      </p>
+    </div>
+
+    <!-- logo company -->
+    <div class="company-cards cards">
+      <include
+        src="./components/card.html"
+        locals='{"list": [
+        {"class": "company-card", "cardImage": "image/desktop/logo_shells.webp", "cardName": "logo_shells", "contentCard":"" },
+        {"class": "company-card", "cardImage": "image/desktop/logo_smartFinder.webp", "cardName": "logo_smartFinder", "contentCard":"" },
+        {"class": "company-card", "cardImage": "image/desktop/logo_zoomerr.webp", "cardName": "logo_zoomerr", "contentCard":"" },
+        {"class": "company-card", "cardImage": "image/desktop/logo_artVenue.webp", "cardName": "logo_artVenue", "contentCard":"" },
+        {"class": "company-card", "cardImage": "image/desktop/logo_kontrastr.webp", "cardName": "logo_artVenue", "contentCard":""},
+        {"class": "company-card", "cardImage": "image/desktop/logo_wavesmarathon.webp", "cardName": "logo_wavesmarathon", "contentCard":"" }
+        ]}'
+      >
+      </include>
+    </div>
   </section>
 </main>

@@ -1,0 +1,39 @@
+@use "../../abstracts/" as *;
+
+/*********** Company Page ***********/
+
+.company {
+  padding: $padding-desktop;
+  background-color: $second-color;
+
+  @include tablet {
+    padding: $padding-mobile;
+  }
+  @include mobile {
+    padding: $padding-mobile;
+  }
+
+  &-introduce {
+    display: none;
+    text-align: center;
+    @include desktop {
+      @include flex($direction: column, $gap: 48px);
+    }
+  }
+
+  &-cards {
+    padding-top: 80px;
+
+    .img-main {
+      width: auto;
+    }
+
+    @include tablet {
+      padding: 0;
+    }
+
+    @include mobile {
+      padding: 0;
+    }
+  }
+}
