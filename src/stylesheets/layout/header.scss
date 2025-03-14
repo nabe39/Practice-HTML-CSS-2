@@ -1,0 +1,178 @@
+@use "../abstracts/" as *;
+
+/***************** Header Page *****************/
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+//Navbar
+header {
+  padding: 0 80px;
+  @include tablet {
+    padding: 0 16px;
+  }
+  @include mobile {
+    padding: 0 16px;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr; /* Chia bố cục 3 phần */
+    align-items: center;
+    gap: 24px;
+    padding: 16px 80px;
+
+    ul {
+      @include flex($align: center, $justify: space-between, $gap: 16px);
+
+      li {
+        list-style: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%; /* 16px */
+        a {
+          color: $text-color;
+        }
+        figure {
+          @include flex($gap: 8px, $align: center);
+        }
+      }
+    }
+
+    .link-direct-mobile {
+      display: none;
+    }
+
+    .btn-action {
+      @include flex($align: center, $justify: flex-end, $gap: 16px);
+      .btn {
+        padding: 16px 12px;
+      }
+    }
+
+    @include tablet {
+      padding: 16px;
+
+      @include flex($justify: space-between, $align: center);
+      .desktop {
+        display: none;
+      }
+      .link-direct-mobile {
+        display: block;
+      }
+    }
+
+    @include mobile {
+      padding: 16px;
+
+      @include flex($justify: space-between, $align: center);
+      .desktop {
+        display: none;
+      }
+      .link-direct-mobile {
+        display: block;
+      }
+    }
+  }
+
+  //Hero
+  .hero {
+    padding: 80px;
+    background-color: $second-color;
+
+    @include flex($gap: 80px, $justify: space-between);
+
+    @include tablet {
+      padding: 48px 16px;
+      gap: 32px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mobile {
+      padding: 48px 16px;
+      gap: 32px;
+      flex-direction: column;
+    }
+
+    &-title {
+      @include flex($direction: column, $gap: 64px, $justify: center);
+
+      width: 50%;
+      &-top {
+        @include flex($direction: column, $gap: 48px, $align: flex-start);
+        h1 {
+          font-size: 54px;
+          line-height: 110%; /* 59.4px */
+          @include mobile {
+            font-size: 32px;
+            line-height: 110%; /* 35.2px */
+          }
+        }
+        @include tablet {
+          align-items: center;
+        }
+      }
+      &-bottom {
+        @include flex($gap: 16px);
+        width: 70%;
+        @media screen and (max-width: 1370px) {
+          width: 100%;
+        }
+        button {
+          @include flex($align: center, $justify: center);
+          width: calc(100% / 2 - 2%);
+
+          @include tablet {
+            width: 100%;
+          }
+          @include mobile {
+            width: 100%;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%; /* 14px */
+            letter-spacing: 0.5px;
+            padding: 8px 12px;
+            figure {
+              display: none;
+            }
+          }
+        }
+      }
+      @include tablet {
+        gap: 48px;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        text-align: center;
+      }
+      @include mobile {
+        gap: 48px;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+      }
+    }
+
+    &-img {
+      @include desktop {
+        animation: bounce 2s infinite;
+      }
+    }
+  }
+}
