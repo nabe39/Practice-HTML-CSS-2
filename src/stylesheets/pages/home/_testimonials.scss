@@ -9,10 +9,12 @@
   }
 
   background-color: $second-color;
+
   @include flex($direction: column, $align: center);
   &-slider {
     padding-top: $padding-desktop;
     max-width: 1280px;
+
     @include mobile {
       padding-top: 48px;
     }
