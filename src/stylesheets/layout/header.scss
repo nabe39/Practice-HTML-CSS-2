@@ -18,14 +18,24 @@
   }
 }
 
+
+//Navbar
 header {
-  //Navbar
+  padding: 0 80px;
+  @include tablet {
+    padding: 0 16px;
+  }
+  @include mobile {
+    padding: 0 16px;
+  }
+
   nav {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr; /* Chia bố cục 3 phần */
     align-items: center;
     gap: 24px;
     padding: 16px 80px;
+
     ul {
       @include flex($align: center, $justify: space-between, $gap: 16px);
 
@@ -57,6 +67,7 @@ header {
 
     @include tablet {
       padding: 16px;
+
       @include flex($justify: space-between, $align: center);
       .desktop {
         display: none;
@@ -68,6 +79,7 @@ header {
 
     @include mobile {
       padding: 16px;
+
       @include flex($justify: space-between, $align: center);
       .desktop {
         display: none;
@@ -82,6 +94,7 @@ header {
   .hero {
     padding: 80px;
     background-color: $second-color;
+
     @include flex($gap: 80px, $justify: space-between);
 
     @include tablet {
@@ -157,8 +170,7 @@ header {
       }
     }
 
-    &-img {
-      
+    &-img {      
       @include desktop {
         animation: bounce 2s infinite;
       }
