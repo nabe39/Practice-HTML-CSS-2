@@ -1,0 +1,135 @@
+@use "../abstracts/" as *;
+
+/*************** Footer Page ***************/
+
+footer {
+  background-color: $footer-color;
+  color: $background-color;
+  padding: $padding-desktop;
+  @include flex(
+    $direction: column,
+    $justify: center,
+    $align: flex-start,
+    $gap: 48px
+  );
+  hr {
+    color: $background-color;
+    height: 1px;
+    width: 100%;
+  }
+  .container-top-footer {
+    @include flex($justify: space-between, $align: center, $gap: 48px);
+    width: 100%;
+    .email-form {
+      @include flex($align: stretch, $gap: 16px, $justify: flex-end);
+      width: 100%;
+      .input-container {
+        width: 100%;
+        max-width: 317px;
+        background-color: $second-color;
+        border: 1px solid $footer-border-color;
+        padding: 16px 12px;
+
+        @include flex($align: center, $gap: 8px, $justify: stretch);
+
+        input {
+          background: transparent;
+          border: 0;
+          outline: none;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .container-menu-footer {
+    @include flex($justify: space-between, $align: flex-start, $gap: 48px);
+    width: 100%;
+
+    .menu-footer {
+      white-space: nowrap;
+      @include flex(
+        $direction: column,
+        $justify: space-between,
+        $align: stretch,
+        $gap: 16px
+      );
+
+      span:first-child {
+        padding: 12px 0;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 22px;
+      }
+    }
+    .menu-contact-footer {
+      @include flex($direction: column, $gap: 24px);
+      .menu-contact-footer-top {
+        @include flex($gap: 16px, $direction: column);
+
+        .contain-logo-contact-app {
+          @include flex($gap: 8px, $align: flex-start);
+        }
+      }
+      span {
+        padding: 12px 0;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 22px;
+      }
+      .menu-contact-footer-bottom {
+        @include flex($direction: column, $gap: 8px);
+        .logo-menu-contact-social {
+          @include flex(
+            $direction: row,
+            $gap: 16px,
+            $align: center,
+            $justify: flex-start
+          );
+        }
+      }
+    }
+  }
+  .container-bottom-footer {
+    width: 100%;
+    @include flex($align: center, $justify: space-between);
+    .bottom-footer-menu {
+      @include flex($align: center, $gap: 16px);
+    }
+  }
+
+  // Tablet
+  @media screen and (max-width: 775px) {
+    padding: 48px 16px;
+    $gap: 32px;
+    .container-top-footer {
+      @include flex($direction: column);
+      .email-form {
+        justify-content: flex-start;
+      }
+    }
+    .container-menu-footer {
+      @include flex($direction: column, $align: flex-start);
+    }
+    .container-bottom-footer {
+      @include flex($direction: column, $align: flex-start);
+    }
+  }
+
+  // Mobile
+  @include mobile {
+    padding: 48px 16px;
+    $gap: 32px;
+    .container-top-footer {
+      @include flex($direction: column, $align: stretch);
+      .email-form {
+        justify-content: flex-start;
+      }
+    }
+    .container-menu-footer {
+      @include flex($direction: column, $align: flex-start);
+    }
+    .container-bottom-footer {
+      @include flex($direction: column, $align: flex-start);
+    }
+  }
+}
