@@ -1,5 +1,8 @@
 <each loop="item in {{list}}">
   <div class="price-card card">
+    <if condition="item.popular == 'true' " >
+      <div class="tag-package">Most Popular</div>
+    </if>
     <div class="package-name">
       <h3>{{item.packageName}}</h3>
       <span>{{item.packageDescription}}</span>
@@ -17,7 +20,11 @@
         <each loop="Ft in item.listFt">
           <div class="package-feature">
             <figure>
-              <img src="../assets/icon/ic_check.svg" alt="ic_check" class="img-main"/>
+              <img
+                src="../assets/icon/ic_check.svg"
+                alt="ic_check"
+                class="img-main"
+              />
             </figure>
             <span>Feature {{Ft}}</span>
           </div>

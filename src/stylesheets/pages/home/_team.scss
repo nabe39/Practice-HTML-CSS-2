@@ -37,9 +37,10 @@
           @include flex($direction: column, $gap: 16px);
           .link-contact-member {
             @include flex($align: center, $justify: center, $gap: 16px);
-            figure{
+            figure {
               max-width: 24px;
-              img{
+              cursor: pointer;
+              img {
                 width: auto;
               }
             }
