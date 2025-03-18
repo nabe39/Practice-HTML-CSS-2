@@ -1,4 +1,43 @@
 <main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-title">
+      <div class="hero-title-top">
+        <h1>Host Design Meetings From Anywhere</h1>
+        <p>
+          Unlock your design skills to create beautiful websites and apps with a
+          poweful and easy-to-use tool
+        </p>
+      </div>
+      <div class="hero-title-bottom">
+        <button class="hero-title-btn btn">
+          <span>Primary Action</span>
+          <figure>
+            <img
+              src="../assets/icon/ic_arrow-right-light.svg"
+              alt="ic_arrow-right-light"
+            />
+          </figure>
+        </button>
+        <button class="hero-title-btn btn btn-no-primary">
+          <span>Secondary Action</span>
+        </button>
+      </div>
+    </div>
+    <picture class="hero-img">
+      <source
+        media="(max-width:1250px)"
+        srcset="../assets/image/mobile/hero_img_right_mobile.webp"
+        class="img-main"
+      />
+      <img
+        src="../assets/image/desktop/hero_img_right_desktop.webp"
+        alt="hero img"
+        class="img-main"
+      />
+    </picture>
+  </section>
+  
   <!-- Tools Section  -->
   <section class="tools">
     <!-- Title -->
@@ -272,24 +311,23 @@
 
     <!-- Price card -->
     <article class="container-price-cards">
-      <div class="tag-package">Most Popular</div>
       <div class="price-cards cards">
         <include
           src="./components/card-price.html"
           locals='{"list":[
-          {"packageName":"Freelancer",
+          {"popular":"false","packageName":"Freelancer",
             "packageDescription":"Quisque donec nibh diam tellus integer eros.",
             "price":"$35",
             "priceSale":"$25",
             "priceDescription":"$25 USD per month, paid annually", "listFt": ["Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen"]},
   
-            {"packageName":"Professional",
+            {"popular":"true","packageName":"Professional",
             "packageDescription":"Sed eget purus vulputate suscipit erat.",
             "price":"$65",
             "priceSale":"$55",
             "priceDescription":"$55 USD per month, paid annually", "listFt": ["Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen","Seventeen","Eighteen"]},
   
-            {"packageName":"Agency",
+            {"popular":"false","packageName":"Agency",
             "packageDescription":"Odio aenean purus non cursus blandit.",
             "price":"$125",
             "priceSale":"$95",
@@ -320,8 +358,8 @@
     </div>
   </section>
 
-   <!-- CTA Section -->
-   <section class="cta">
+  <!-- CTA Section -->
+  <section class="cta">
     <!-- titile -->
     <div class="cta-title">
       <include
@@ -340,12 +378,8 @@
 
     <!-- button action -->
     <div class="cta-contain-button-action">
-      <button class="cta-btn-primary btn primary">
-        Primary Action
-      </button>
-      <button class="cta-btn btn btn-no-primary">
-        Secondary Action
-      </button>
+      <button class="cta-btn-primary btn primary">Primary Action</button>
+      <button class="cta-btn btn btn-no-primary">Secondary Action</button>
     </div>
   </section>
 </main>

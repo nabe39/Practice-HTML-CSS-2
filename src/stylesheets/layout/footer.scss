@@ -68,6 +68,9 @@ footer {
 
         .contain-logo-contact-app {
           @include flex($gap: 8px, $align: flex-start);
+          figure {
+            cursor: pointer;
+          }
         }
       }
       span {
@@ -85,6 +88,9 @@ footer {
             $align: center,
             $justify: flex-start
           );
+          figure {
+            cursor: pointer;
+          }
         }
       }
     }

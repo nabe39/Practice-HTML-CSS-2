@@ -22,6 +22,10 @@
     @include flex($gap: 16px, $align: center, $justify: center);
 
     text-align: center;
+    .testimonials-prev,
+    .testimonials-next {
+      cursor: pointer;
+    }
     .content-testimonials {
       @include flex(
         $direction: column,
