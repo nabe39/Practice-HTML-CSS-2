@@ -2,19 +2,16 @@
 
 /***************** Hero Page *****************/
 .hero {
-  padding: 80px;
   background-color: $second-color;
   @include flex($gap: 80px, $justify: space-between);
 
   @include tablet {
-    padding: 48px 16px;
     gap: 32px;
     flex-direction: column;
     align-items: center;
   }
 
   @include mobile {
-    padding: 48px 16px;
     gap: 32px;
     flex-direction: column;
   }

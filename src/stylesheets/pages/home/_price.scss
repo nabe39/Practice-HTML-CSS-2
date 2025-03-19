@@ -8,11 +8,6 @@
     $justify: center,
     $align: center
   );
-  padding: $padding-desktop;
-
-  @include mobile {
-    padding: $padding-mobile;
-  }
 
   &-title {
     @include flex(

@@ -3,15 +3,6 @@
 /***** Blog Page *****/
 .blog {
   @include flex($direction: column, $gap: 64px, $align: center);
-  padding: $padding-desktop;
-
-  @include tablet {
-    padding: $padding-mobile;
-  }
-
-  @include mobile {
-    padding: $padding-mobile;
-  }
 
   &-cards {
     max-width: 1280px;

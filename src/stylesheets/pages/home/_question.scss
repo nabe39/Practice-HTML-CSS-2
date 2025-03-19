@@ -3,7 +3,6 @@
 /********** Q&A **********/
 .question {
   background-color: $second-color;
-  padding: $padding-desktop;
 
   @include flex(
     $direction: column,
@@ -36,11 +35,9 @@
   }
 
   @include tablet {
-    padding: $padding-mobile;
     gap: 32px;
   }
   @include mobile {
-    padding: $padding-mobile;
     gap: 32px;
     .container-questions {
       width: 100%;

@@ -2,12 +2,6 @@
 
 /****** Testimonials Page ******/
 .testimonials {
-  padding: $padding-desktop;
-
-  @include mobile {
-    padding: $padding-mobile;
-  }
-
   background-color: $second-color;
 
   @include flex($direction: column, $align: center);
