@@ -3,11 +3,9 @@
 /*********** Caption Page ***********/
 
 .caption {
-  padding: $padding-desktop;
   @include flex($direction: column, $gap: 64px, $align: center);
 
   @include mobile {
-    padding: $padding-mobile;
     gap: 32px;
   }
   &-cards {

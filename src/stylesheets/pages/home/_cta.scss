@@ -2,7 +2,6 @@
 
 /*************** CTA Page ***************/
 .cta {
-  padding: $padding-desktop;
   @include flex(
     $direction: column,
     $gap: 48px,
@@ -22,7 +21,6 @@
   }
 
   @include tablet {
-    padding: $padding-mobile;
     gap: 32px;
 
     &-title {
@@ -31,7 +29,6 @@
     }
   }
   @include mobile {
-    padding: $padding-mobile;
     gap: 32px;
     &-title {
       text-align: center;

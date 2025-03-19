@@ -2,16 +2,8 @@
 
 /*********** Tools Page ***********/
 .tools {
-  padding: $padding-desktop;
   @include flex($direction: column, $gap: 64px);
-
-  @include tablet {
-    padding: $padding-mobile;
-  }
-  @include mobile {
-    padding: $padding-mobile;
-  }
-
+  
   &-card{
     figure{
         max-width: 78px ;

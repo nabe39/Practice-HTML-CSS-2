@@ -3,15 +3,7 @@
 /*********** Company Page ***********/
 
 .company {
-  padding: $padding-desktop;
   background-color: $second-color;
-
-  @include tablet {
-    padding: $padding-mobile;
-  }
-  @include mobile {
-    padding: $padding-mobile;
-  }
 
   &-introduce {
     display: none;

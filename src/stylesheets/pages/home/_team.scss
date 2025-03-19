@@ -2,16 +2,7 @@
 
 /********* Team Page *********/
 .team {
-  padding: $padding-desktop;
-
-  @include tablet {
-    padding: $padding-mobile;
-  }
-
-  @include mobile {
-    padding: $padding-mobile;
-  }
-
+  
   @include flex($direction: column, $gap: 64px, $align: center);
   background-color: $second-color;
   &-cards {
