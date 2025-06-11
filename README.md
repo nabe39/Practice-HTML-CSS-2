@@ -40,3 +40,5 @@ pnpm i
 pnpm dev
 Open on web: http://localhost:1234
 ```
+## DEPLOYMENT 
+- Link website: https://practice-html-css-2-six.vercel.app/
