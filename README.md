@@ -4,7 +4,7 @@
 
 ## TIMELINE:
 
-- 7 days (March 10 - March 16 )
+- 3 weeks (March 10 - March 30 )
 
 ## TARGET:
 
@@ -37,7 +37,7 @@
 ```sh
 cd html-css
 pnpm i
-pnpm dev
+pnpm run dev
 Open on web: http://localhost:1234
 ```
 ## DEPLOYMENT 
